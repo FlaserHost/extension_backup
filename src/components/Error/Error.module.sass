@@ -1,0 +1,53 @@
+.wrapper
+    position: absolute
+    bottom: 0
+    left: 0
+    top: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background: #f9f9f9ba
+
+    .content
+        width: 70%
+        height: max-content
+        max-height: 80%
+        border-radius: 8px
+        background: #FFF
+        box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
+        display: flex
+        align-items: stretch
+        justify-content: space-between
+        flex-direction: column
+        .header
+            font-size: 1.2rem
+            border-bottom: 1px solid var(--text-secondary)
+            text-align: center
+            padding: .5rem
+        .text
+            padding: 2rem
+            text-align: center
+            max-height: 60%
+            overflow: auto
+            scrollbar-width: 5px
+            scrollbar-color: var(--blue)
+            &::-webkit-scrollbar-track
+                box-shadow: none
+                -webkit-box-shadow: none
+                background-color: #fff
+
+            &::-webkit-scrollbar
+                width: 5px
+                height: 5px
+                background-color: #fff
+
+            &::-webkit-scrollbar-thumb
+                background-color: var(--blue)
+                border-radius: 10px
+                -webkit-border-radius: 10px
+                -moz-border-radius: 10px
+                -ms-border-radius: 10px
+                -o-border-radius: 10px
+        .buttonWrapper
+            margin: .1rem 1rem 1rem 1rem

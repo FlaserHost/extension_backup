@@ -1,0 +1,137 @@
+.wrapper
+    padding: 1.5rem 1.5rem 2rem
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    .label
+        margin-bottom: 0.3em
+    .title
+        font-size: 1.8em
+
+    .selectWrap
+        height: 2.5rem
+        width: 100%
+        position: relative
+        margin: 0 auto
+        background: #fff
+        &:hover
+            .select
+                border-color: var(--blue)
+            .arrow
+                border-top: 6px solid var(--blue)
+
+        .select
+            cursor: pointer
+            height: 100%
+            border: 1px solid var(--text-secondary)
+            border-radius: 8px
+
+            &.active
+                border-color: var(--blue)
+                border-bottom: 0
+                border-radius: 8px 8px 0 0
+
+            .valueWrap
+                height: 100%
+                display: flex
+                align-items: center
+
+            .selectValueWrap
+                display: inline-block
+                white-space: nowrap
+                text-overflow: ellipsis
+                overflow: hidden
+                max-width: 85%
+                display: flex
+                height: 100%
+                align-items: center
+                padding: 5px 12px
+
+            .selectInput
+                font-size: 14px
+                line-height: 18px
+                color: #000
+                padding-left: 12px
+
+        .arrow.active
+            transform: rotate(180deg)
+            transition: transform .4s ease
+
+        .arrow
+            position: absolute
+            top: calc(100% / 2 - 3px)
+            right: 10px
+            border-top: 6px solid var(--text-secondary)
+            border-left: 5px solid transparent
+            border-right: 5px solid transparent
+
+        .contentWrap.active
+            max-height: 300px
+            border: 1px solid var(--blue)
+            border-radius: 0 0 8px 8px
+            // border-top: 0
+            box-shadow: 0 5px 0 5px #fff
+            animation: heigthAnimate .5s
+            scrollbar-width: 5px
+            scrollbar-color: var(--blue)
+            &::-webkit-scrollbar-track
+                box-shadow: none
+                -webkit-box-shadow: none
+                background-color: #fff
+
+            &::-webkit-scrollbar
+                width: 5px
+                height: 5px
+                background-color: #fff
+
+            &::-webkit-scrollbar-thumb
+                background-color: var(--blue)
+                border-radius: 10px
+                -webkit-border-radius: 10px
+                -moz-border-radius: 10px
+                -ms-border-radius: 10px
+                -o-border-radius: 10px
+
+        .contentWrap
+            position: absolute
+            top: calc(100% - 1px)
+            overflow: hidden
+            overflow-y: auto
+            width: 100%
+            max-height: 0
+            background: inherit
+            border-radius: 0 0 5px 5px
+            background: #fff
+            user-select: none
+
+            .content
+                max-height: 100%
+                padding: 0
+                margin: 0
+
+            .option.active
+                background: #fff
+
+            .option
+                font-size: 12px
+                font-weight: 500
+                display: block
+                width: 100%
+                height: 3em
+                display: flex
+                align-items: center
+                cursor: pointer
+                padding: 5px 12px
+                &:hover
+                    background: #F0F6FF
+
+@keyframes heigthAnimate
+    0%
+        max-height: 0
+        overflow: hidden
+    99%
+        overflow: hidden
+    100%
+        max-height: 300px
+        overflow: auto

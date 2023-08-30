@@ -1,0 +1,33 @@
+.wrapper
+    border-bottom: 1px solid var(--text-secondary)
+    height: 50px
+    max-height: 50px
+    min-height: 50px
+    display: flex
+    align-items: center
+    padding: 0 2em
+    justify-content: space-between
+    .title
+        font-size: 22px
+    .buttonWrapper
+        height: 100%
+        display: flex
+        align-items: center
+        .button
+            outline: none
+            background: none
+            border: none
+            padding: 5px
+            margin: 0 auto
+            display: block
+            cursor: pointer
+            svg
+                path
+                    fill: var(--text-secondary)
+                    transition: fill .3s ease
+            &:hover
+                svg
+                    path
+                        fill: var(--blue)
+            &:active
+                opacity: .8
